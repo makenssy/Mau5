@@ -2,9 +2,9 @@
  "name": "Prueba",
  "description": "Prueba",
  "version": "0.0.0",
- "main": "app.json",
+ "main": "app.js",
  "scripts": {
-   "start": "node app.json"
+   "start": "node app.js"
  },
  "dependencies": {
    "discord.js": "11.1.0",
