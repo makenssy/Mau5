@@ -22,7 +22,6 @@ bot.on('ready', () => {
 
     bot.user.setStatus('Online')
 
-
 });
 
 client.login(process.env.BOT_TOKEN);
