@@ -1,0 +1,13 @@
+{
+ "name": "Prueba",
+ "description": "Prueba",
+ "version": "0.0.0",
+ "main": "app.json",
+ "scripts": {
+   "start": "node app.json"
+ },
+ "dependencies": {
+   "discord.js": "11.1.0",
+   "request": "2.81.0"
+ }
+} 
