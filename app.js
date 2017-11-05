@@ -18,7 +18,7 @@ bot.on('message', message => {
 
 // Bot Launched
 bot.on('ready', () => {
-    console.log('Okay...') //
+    console.log('Okay...')
 
     bot.user.setStatus('Online')
 
