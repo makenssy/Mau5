@@ -16,4 +16,13 @@ bot.on('message', message => {
 
 });
 
+// Bot Launched
+bot.on('ready', () => {
+    console.log('Okay...') //
+
+    bot.user.setStatus('Online')
+
+
+});
+
 client.login(process.env.BOT_TOKEN);
