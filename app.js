@@ -1,26 +1,15 @@
-var Discord = require('discord.js');
-var bot = new Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-// Listener Event: Message Received
-bot.on('message', message => {
-
-// Variables
-  var sender = message.author; 
-  var msg = message.content.toUpperCase(); 
-  var prefix = '>' 
-
-  // Ping / Pong
-  if (msg === prefix + 'PING') {
-      message.channel.send('Pong!')
-  }
+client.on('ready', () =>
+       console.log('Ready...');   
 
 });
 
-// Bot Launched
-bot.on('ready', () => {
-    console.log('Okay...')
-
-    bot.user.setStatus('Online')
+client.on('message' message => {
+       if (message.content === 'ping') {
+         message.reply('Pong');
+    }
 
 });
 
