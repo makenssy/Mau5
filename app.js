@@ -32,7 +32,7 @@ bot.on('guildMemberAdd', member => {
     console.log('User ' + member.user.username + ' has joined the server!')
     console.log(member)
 
-    var role = member.guild.roles.find('name', 'Mau5');
+    var role = member.guild.roles.find('name', 'Platinum');
     member.addRole(role)
 
     const embed = new Discord.RichEmbed()
