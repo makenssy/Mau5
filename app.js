@@ -15,7 +15,7 @@ bot.on('message', message => {
   if (msg === prefix + 'PING') {
       message.channel.send(`:ping_pong: Pong! \`\n${Math.round(client.ping)}ms\`\ `)
       
-
+});
 
 // Bot Launched
 bot.on('ready', () => {
