@@ -11,9 +11,11 @@ bot.on('message', message => {
   var prefix = '>' // The text before commands, you can set this to what ever you want
 
   // Ping / Pong
-  if (msg === prefix + 'PING') {
-      message.channel.send('Pong!')
-  }
+  if (message.content.startsWith(prefix + "PING")) {
+            let embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setDescription(`:ping_pong: Pong! \`\n${Math.round(client.ping)}ms\`\ `)
+            message.channel.send({ embed })};
 
 });
 
