@@ -12,9 +12,9 @@ bot.on('message', message => {
   
 
   // Ping / Pong
-  if (message.content.startsWith(prefix + "PING")) {
+  if (message.content.startsWith(prefix + "ping")) {
             const embed = new Discord.RichEmbed()
-                .setColor('RANDOM')
+                .setColor('0x1CE866')
                 .setDescription(`:ping_pong: Pong! \`\n${Math.round(bot.ping)}ms\`\ `)
             message.channel.send({ embed })};
   
