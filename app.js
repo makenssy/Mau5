@@ -9,10 +9,11 @@ bot.on('message', message => {
   var sender = message.author; // The person who sent the message
   var msg = message.content.toUpperCase(); // Takes the message, and makes it all uppercase
   var prefix = '>' // The text before commands, you can set this to what ever you want
+  
 
   // Ping / Pong
   if (msg === prefix + 'PING') {
-      message.channel.send(`:ping_pong: Pong! \`\n${Math.round(client.ping)}ms\`\ `)
+      message.channel.send(`:ping_pong: Pong! \`\n${Math.round(client.ping)}ms\`\ `});
       
 });
 
