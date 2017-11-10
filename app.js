@@ -77,8 +77,6 @@ bot.on('guildMemberRemove', member => {
         .addField("**Joined Discord :**", `${member.user.createdAt}`)
         .setFooter(`User that triggered command -> ${message.author.username}#${mention.discriminator}`)
       message.channel.send({ embed })};
-        console.log(`${message.author.username} has used the UserInfo command`)
-      return;
 
 });
 
