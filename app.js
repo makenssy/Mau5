@@ -59,8 +59,8 @@ bot.on('guildMemberRemove', member => {
 });
 
  if (message.content.startsWith(prefix + "info")) {
-        let info = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-        if(!info) return message.channel.sendMessage("You did not specify a user Mention");
+      let info = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+      if(!info) return message.channel.sendMessage("You did not specify a user Mention");
       let member = message.mentions.members.first();
       let mention = message.mentions.users.first();
       let embed = new Discord.RichEmbed()
@@ -81,7 +81,5 @@ bot.on('guildMemberRemove', member => {
       return;
       
 }
-
-});
 
 bot.login(process.env.BOT_TOKEN);
