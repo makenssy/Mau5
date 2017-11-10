@@ -8,6 +8,8 @@ bot.on('message', message => {
 // Variables
   var sender = message.author; // The person who sent the message
   var msg = message.content.toUpperCase(); // Takes the message, and makes it all uppercase
+  var cont = message.content.slice(prefix.length).split(" ");
+  var args = cont.slice(1);
   var prefix = '>' // The text before commands, you can set this to what ever you want
   
 
