@@ -58,26 +58,5 @@ bot.on('guildMemberRemove', member => {
 
 });
 
- if (message.content.startsWith(prefix + "info")) {
-      let info = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-      if(!info) return message.channel.sendMessage("You did not specify a user Mention");
-      let member = message.mentions.members.first();
-      let mention = message.mentions.users.first();
-      let embed = new Discord.RichEmbed()
-        .setDescription(`This is the info about **@${mention.username}#${mention.discriminator}**`)
-        .setColor('RANDOM')
-        .setThumbnail(`${member.user.avatarURL}`)
-        .addField("**Username : **", `${mention.username}`, true)
-        .addField("**User Discriminator :**", `#${mention.discriminator}`, true)
-        .addField("**User ID :**", `${member.id}`, true)
-        .addField("**Playing :**", `${member.user.presence.game === null ? "No Game" : member.user.presence.game.name}`, true) 
-        .addField("**NickName :**", `${member.nickname}`, true)
-        .addField("**Roles :**", `${member.roles.map(r => r.name).join(" -> ")}`)
-        .addField("**Joined Guild :**", `${message.guild.joinedAt}`)
-        .addField("**Joined Discord :**", `${member.user.createdAt}`)
-        .setFooter(`User that triggered command -> ${message.author.username}#${mention.discriminator}`)
-      message.channel.send({ embed })};
-
-});
 
 bot.login(process.env.BOT_TOKEN);
