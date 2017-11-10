@@ -58,8 +58,7 @@ bot.on('guildMemberRemove', member => {
 
 });
 
-var Discord = require('discord.js');
-module.exports.run = async (bot, message, args) => {
+ if (message.content.startsWith(prefix + "info")) {
         let info = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
         if(!info) return message.channel.sendMessage("You did not specify a user Mention");
       let member = message.mentions.members.first();
@@ -83,9 +82,6 @@ module.exports.run = async (bot, message, args) => {
       
 }
 
-module.exports.config = {
-  command: "userinfo"
-}
-
+});
 
 bot.login(process.env.BOT_TOKEN);
