@@ -79,8 +79,6 @@ bot.on('guildMemberRemove', member => {
       message.channel.send({ embed })};
         console.log(`${message.author.username} has used the UserInfo command`)
       return;
-      
-}
 
 });
 
